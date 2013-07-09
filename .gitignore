@@ -35,3 +35,9 @@
 # For Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+hustbeamer/*.cls
+hustbeamer/*.bst
+hustbeamer/*.tex
+hustbeamer/*.bib
+hustbeamer/*.md
