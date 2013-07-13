@@ -191,7 +191,7 @@
 %</driver>
 % \fi
 %
-% \CheckSum{628}
+% \CheckSum{629}
 %
 % \iffalse
 %<*!(example-bib)>
@@ -864,11 +864,9 @@
 \hypersetup{
   bookmarksnumbered=true,
   bookmarksopen=true,
-  bookmarksopenlevel=2,
+  bookmarksopenlevel=3,
   colorlinks=true,
   allcolors=HUST@hyperreflinkred,
-  plainpages=false,
-  pdfpagelabels=true,
   pdfpagemode={FullScreen},
   pdfinfo={Template.Info={hustbeamer.cls v1.0 2013/07/01, Copyright (C) 2013 by Xu Cheng, https://github.com/michael911009/hustbeamer}}
 }
@@ -956,7 +954,7 @@
 \DeclareDocumentCommand\date{m g g}
 {
   \IfNoValueTF{#2}{
-    \HUST@date{#1} % only one argument
+    \HUST@olddate{#1} % only one argument
   }{
     \IfNoValueTF{#3}{ % two arguments
       \setdate{#1}{#2}{1}
@@ -1308,6 +1306,7 @@
 % A command to generate table of contents.
 %    \begin{macrocode}
 \def\PrintTOC{
+  \section*{}
   \begin{frame}{\contentsname}
   \pdfbookmark{\contentsname}{\contentsname}
   \tableofcontents[subsectionstyle=hide]
@@ -1521,7 +1520,6 @@ go back to the beginning of current section\;
 \end{algorithm}
 }
 \end{frame}
-
 \end{document}
 %</example>
 %
