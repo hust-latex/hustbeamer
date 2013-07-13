@@ -82,7 +82,7 @@ This work has the LPPL maintenance status `maintained'.
 
 The Current Maintainer of this work is Xu Cheng.
 
-This work consists of the files hustbeamer.bst, hustbeamer.dtx,
+This work consists of the files hustbeamer.dtx,
 hustbeamer.ins and the derived file hustbeamer.cls 
 along with its documnet and example files.
 ```
