@@ -416,8 +416,6 @@
 %     \item \pkgurl{algorithm2e} 算法环境。
 %     \item \pkgurl{fancynum} 用于将大数每三位断开。
 %     \item \pkgurl{listings} 代码环境。如需更好的代码高亮可以使用\pkgurl{minted}宏包。
-%     \item \pkgurl{longtable} 跨页的超长表格环境。
-%     \item \pkgurl{ltxtable} \textsf{longtable}环境和\textsf{tabularx}环境的合并。
 %     \item \pkgurl{multirow} 用于表格中合并行。
 %     \item \pkgurl{overpic} 用于在图片上层叠其他内容。
 %     \item \pkgurl{tabularx} 扩展到表格环境。
@@ -611,8 +609,6 @@
 %     \item \pkgurl{algorithm2e} For display algorithm.
 %     \item \pkgurl{fancynum} Display the really big number.
 %     \item \pkgurl{listings} For display the highlighted code. If you need better quality, use the package \pkgurl{minted}.
-%     \item \pkgurl{longtable} Create a very long table.
-%     \item \pkgurl{ltxtable} Combine the features of \textsf{longtable} anb \textsf{tabularx}.
 %     \item \pkgurl{multirow} Combine multi-rows in table.
 %     \item \pkgurl{overpic} Put something over a picture,
 %     \item \pkgurl{tabularx} A better table environment.
@@ -892,8 +888,8 @@
 %
 % Load packages for table.
 %    \begin{macrocode}
-\RequirePackage{array}
-\RequirePackage{multirow,tabularx,ltxtable}
+\RequirePackage{array,tabu}
+\RequirePackage{multirow}
 %    \end{macrocode}
 %
 % Load package for code highlight. Here we use \pkgurl{listings} to highlight the code. But if you need more features, use \pkgurl{minted}.
@@ -986,7 +982,7 @@
     \def\indexname{索引}
     \def\figurename{图}
     \def\tablename{表}
-    \def\listingscaption{代码}
+    \AtBeginDocument{\def\listingscaption{代码}}
     \def\refname{参考文献}
     \def\contentsname{目录}
     \def\equationautorefname{公式}
@@ -1052,7 +1048,7 @@
 %    \begin{macrocode}
 \usetheme{Rochester}
 \pgfdeclareimage[width=1.0\paperwidth]{hust-header}{hust-header.png}
-\setbeamertemplate{itemize items}[ball]
+\setbeamertemplate{itemize items}[circle]
 \setbeamertemplate{enumerate items}[default]
 \setbeamertemplate{blocks}[rounded][shadow=true]
 \setbeamercovered{transparent}
@@ -1204,23 +1200,6 @@
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 %    \end{macrocode}
 % \end{macro}
-%
-% To prevent |\cline| breaking page in \pkgurl{longtable} environment, use in this way:
-% \meta{table content} |\\* \nopagebreak \cline{i-j}|
-% \footnote{Reference:\url{http://tex.stackexchange.com/questions/52100/longtable-multirow-problem-with-cline-and-nopagebreak}}
-%    \begin{macrocode}
-\def\@cline#1-#2\@nil{%
-  \omit
-  \@multicnt#1%
-  \advance\@multispan\m@ne
-  \ifnum\@multicnt=\@ne\@firstofone{&\omit}\fi
-  \@multicnt#2%
-  \advance\@multicnt-#1%
-  \advance\@multispan\@ne
-  \leaders\hrule\@height\arrayrulewidth\hfill
-  \cr
-  \noalign{\nobreak\vskip-\arrayrulewidth}}
-%    \end{macrocode}
 %
 % \subsection{Caption Style}
 % Set caption font size as 11pt, use hang format, remove `:' after number and set the skip between context as 12pt.
