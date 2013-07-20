@@ -60,4 +60,7 @@ reallyclean:
 			*.vrb *.xdy *.tdo \
 			*.cls *.tex *.md *.bib hustbeamer*.pdf
 
-.PHONY:all unpack class doc example clean reallyclean FORCE
+checksum:FORCE
+	perl adjust_checksum.pl hustbeamer.dtx
+
+.PHONY:all unpack class doc example clean reallyclean checksum FORCE

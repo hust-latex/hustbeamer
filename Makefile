@@ -40,5 +40,8 @@ else
 	./install/unix.sh uninstall
 endif
 
+checksum:FORCE
+	make -C ./hustbeamer checksum
+
 FORCE:
-.PHONY:all unpack example doc install uninstall clean reallyclean FORCE
+.PHONY:all unpack example doc install uninstall clean reallyclean checksum FORCE
