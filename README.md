@@ -1,11 +1,11 @@
 hustbeamer
 ==========
 
->   中文版[点击这里](https://github.com/michael911009/hustbeamer/blob/master/README.zh-cn.md)。
+>   中文版[点击这里](https://github.com/xu-cheng/hustbeamer/blob/master/README.zh-cn.md)。
 
 An Unofficial Slide Template in LaTeX for [Huazhong University of Science and Technology](http://www.hust.edu.cn). This template is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-This project is part of [hust-latex-template](https://github.com/michael911009/hust-latex-template).
+This project is part of [hust-latex-template](https://github.com/xu-cheng/hust-latex-template).
 
 If this template is useful for you, you might want to buy me a cup of coffee to keep me fresh. Thanks! :)
 
@@ -61,8 +61,8 @@ Then copy following files from directory `hustbeamer` into your TeX project root
 
 **Important : This template can only be compiled by XeLaTeX or LuaLaTeX[Recommend].**
 
-* Manual: See [hustbeamer.pdf](https://github.com/michael911009/hustbeamer/raw/master/hustbeamer/hustbeamer.pdf).
-* Example: See [hustbeamer-example.pdf](https://github.com/michael911009/hustbeamer/raw/master/hustbeamer/hustbeamer-example.pdf).
+* Manual: See [hustbeamer.pdf](https://github.com/xu-cheng/hustbeamer/raw/master/hustbeamer/hustbeamer.pdf).
+* Example: See [hustbeamer-example.pdf](https://github.com/xu-cheng/hustbeamer/raw/master/hustbeamer/hustbeamer-example.pdf).
 
 
 ## License
