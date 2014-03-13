@@ -87,6 +87,3 @@ This work consists of the files hustbeamer.dtx,
 hustbeamer.ins and the derived file hustbeamer.cls 
 along with its document and example files.
 ```
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/xu-cheng/hustbeamer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
