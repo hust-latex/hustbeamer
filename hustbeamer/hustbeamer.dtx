@@ -191,7 +191,7 @@
 %</driver>
 % \fi
 %
-% \CheckSum{601}
+% \CheckSum{602}
 %
 % \iffalse
 %<*!(example-bib)>
@@ -930,14 +930,15 @@
 % A command to set the author.
 %    \begin{macrocode}
 \let\HUST@oldauthor\author
-\DeclareDocumentCommand\author{o m}
+\DeclareDocumentCommand\author{o +m}
 {
   \IfNoValueTF{#1}{
     \HUST@oldauthor{#2}
+     \hypersetup{pdfauthor={#2}}
   }{
     \HUST@oldauthor[#1]{#2}
+    \hypersetup{pdfauthor={#1}}
   }
-  \hypersetup{pdfauthor={#2}}
 }
 \author{}
 %    \end{macrocode}
@@ -1207,6 +1208,7 @@
 \DeclareCaptionFont{HUST@captionfont}{\changefont{size=11pt}}
 \DeclareCaptionLabelFormat{HUST@caplabel}{#1~#2}
 \captionsetup{
+  compatibility=false,
   font=HUST@captionfont,
   labelformat=HUST@caplabel,
   format=hang,
