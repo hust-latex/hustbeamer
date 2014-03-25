@@ -41,7 +41,7 @@ lualatex hustbeamer.ins
 popd
 goto :exit
 
-example:
+:example
 call :unpack
 pushd hustbeamer
 lualatex -shell-escape -8bit hustbeamer-example
