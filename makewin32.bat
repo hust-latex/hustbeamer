@@ -54,8 +54,7 @@ goto :exit
 :doc
 pushd hustbeamer
 lualatex -shell-escape -8bit hustbeamer.dtx
-makeindex -q -s l3doc.ist hustbeamer
-makeindex -s l3doc.ist  -o hustbeamer.ind hustbeamer.idx
+makeindex -s gind.ist  -o hustbeamer.ind hustbeamer.idx
 lualatex -shell-escape -8bit hustbeamer.dtx
 lualatex -shell-escape -8bit hustbeamer.dtx
 popd
