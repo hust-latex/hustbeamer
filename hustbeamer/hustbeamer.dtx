@@ -191,7 +191,7 @@
 %</driver>
 % \fi
 %
-% \CheckSum{602}
+% \CheckSum{609}
 %
 % \iffalse
 %<*!(example-bib)>
@@ -217,6 +217,7 @@
 %
 % \changes{v1.0}{2013/07/01}{Initial version}
 % \changes{v1.1}{2016/06/01}{Fix for TeXLive 2016. Remove \texttt{interfaces} and other problematic package}
+% \changes{v1.2}{2016/07/05}{Fix for \XeLaTeX}
 %
 % \GetFileInfo{hustbeamer.dtx}
 %
@@ -840,8 +841,13 @@
 %
 % Papaer setting.
 %    \begin{macrocode}
-\pagewidth=\paperwidth
-\pageheight=\paperheight
+\ifthenelse{\isundefined{\pagewidth}}{
+  \pdfpagewidth=\paperwidth
+  \pdfpageheight=\paperheight
+}{
+  \pagewidth=\paperwidth
+  \pageheight=\paperheight
+}
 %    \end{macrocode}
 %
 % Indent of paragraph and skip between paragraphs.
